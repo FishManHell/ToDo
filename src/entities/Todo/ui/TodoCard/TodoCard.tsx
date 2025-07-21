@@ -49,7 +49,6 @@ export const TodoCard = memo((props: TodoCardProps) => {
                 readonly={!todo.isEditable}
                 className={cls["todo-card-input"]}
                 isEditable={todo.isEditable}
-
             />
             <Button
                 className={cls["todo-card-btn"]}
