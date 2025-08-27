@@ -2,12 +2,9 @@
 @use "variables/global";
 
 .app {
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 400px;
-    background: var(--bg-todo-list);
-  }
+  padding: 0 10px 0 10px;
+}
+
+body {
+  background: var(--bg-todo-list);
 }
