@@ -12,10 +12,8 @@ declare module '*.jpeg';
 
 declare module "*.svg" {
     import React from "react";
-    const SVG: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
+    const SVG: React.FC<React.SVGProps<SVGSVGElement>>;
     export default SVG;
 }
 
-declare const __IS_DEV__: boolean;
-declare const __API_URL__: string;
 declare const __PROJECT__: string

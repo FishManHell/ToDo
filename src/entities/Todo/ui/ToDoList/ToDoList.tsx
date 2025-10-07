@@ -1,6 +1,6 @@
 import cls from "./ToDoList.module.scss"
 import classNames from "classnames";
-import {useToDos} from "shared/libs/hooks/useToDos";
+import {useToDos} from "shared/libs/hooks";
 import {TodoCard} from "../TodoCard/TodoCard";
 import ArrowIcon from "shared/assets/icons/arrow_right.svg"
 import {Button} from "shared/ui/Button";
@@ -28,11 +28,17 @@ export const ToDoList = ({className}: ToDoListProps) => {
                 </header>
                 <InputContainer>
                     <Input
+                        data-testid={"todos-input"}
                         placeholder={"Adicione um item"}
                         className={cls["todo-list-input"]}
                         ref={inputRef}
                     />
-                    <Button className={cls["todo-list-input-btn"]} onClick={onAddTodo} theme={ButtonTheme.CLEAR}>
+                    <Button
+                        data-testid={"add-todo-btm"}
+                        className={cls["todo-list-input-btn"]}
+                        onClick={onAddTodo}
+                        theme={ButtonTheme.CLEAR}
+                    >
                         <ArrowIcon/>
                     </Button>
                 </InputContainer>

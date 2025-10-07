@@ -12,7 +12,6 @@ import SaveIcon from "shared/assets/icons/save.svg"
 import {ButtonTheme} from "shared/ui/Button/ui/Button";
 
 interface TodoCardProps extends ToDoCard {
-    className?: string;
     onToggleEdit?: (id: string) => void;
 }
 
@@ -44,6 +43,7 @@ export const TodoCard = memo((props: TodoCardProps) => {
     return (
         <InputContainer className={classNames(cls["todo-card"], className)}>
             <Input
+                data-testid={"todo-input"}
                 value={editValue}
                 onChange={onChangeInputValue}
                 readonly={!todo.isEditable}
@@ -51,6 +51,7 @@ export const TodoCard = memo((props: TodoCardProps) => {
                 isEditable={todo.isEditable}
             />
             <Button
+                data-testid={"edit-save-btn"}
                 className={cls["todo-card-btn"]}
                 theme={btnTheme}
                 onClick={onEditHandler}>
@@ -58,12 +59,14 @@ export const TodoCard = memo((props: TodoCardProps) => {
             </Button>
             {todo.isEditable &&
                 <Button
+	                data-testid={"cancel-save-btn"}
                     className={cls["todo-card-btn"]}
                     theme={btnTheme}
                     onClick={onDiscardHandler}
                 ><CancelIcon/>
                 </Button>}
             <Button
+                data-testid={"remove-btn"}
                 className={cls["todo-card-btn"]}
                 theme={btnTheme}
                 onClick={onRemoveHandler}

@@ -22,7 +22,6 @@ export const buildPlugins = (options: BuildOptions): WebpackPluginInstance[] => 
             chunkFilename: 'css/[name].[contenthash:8].css',
         }),
         new DefinePlugin({
-            __IS_DEV__: JSON.stringify(isDev),
             __PROJECT__: JSON.stringify(project)
         }),
     ]

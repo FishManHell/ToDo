@@ -1,8 +1,10 @@
 .todo-card {
   border-radius: 0;
+
   &:first-child {
     border-radius: 5px 5px 0 0;
   }
+
   &:last-child {
     border-radius: 0 0 5px 5px ;
   }
@@ -26,7 +28,7 @@
     margin-right: 0;
   }
 
-  @media screen and (max-width: 380px) {
+  @media screen and (width <= 380px) {
     width: 25px;
     height: 25px;
 

@@ -34,7 +34,7 @@ export const Input = memo(forwardRef<InputRef, InputProps>((props, ref ) => {
 
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const mods = {[cls["is_editable"]]: isEditable, [cls[theme]]: theme}
+    const mods = {[cls["is-editable"]]: isEditable, [cls[theme]]: theme}
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
