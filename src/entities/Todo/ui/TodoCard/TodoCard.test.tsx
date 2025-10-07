@@ -1,5 +1,5 @@
 import {fireEvent, render, screen} from "@testing-library/react";
-import {TodoCard} from "entities/Todo/ui/TodoCard/TodoCard";
+import {TodoCard} from "./TodoCard";
 
 const todoItem = {id: "1234", text: "hello", isEditable: false}
 const editableItem = {id: "1234", text: "hello", isEditable: true}
